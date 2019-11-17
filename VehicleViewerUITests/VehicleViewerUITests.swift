@@ -1,6 +1,8 @@
 import XCTest
 
 class VehicleViewerUITests: XCTestCase {
+    
+    private let mockSleepDelay: UInt32 = 3
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -15,13 +17,49 @@ class VehicleViewerUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // UI tests must launch the application that they test.
+    func testThatThereShouldBe2TabItems() {
         let app = XCUIApplication()
         app.launch()
+        sleep(mockSleepDelay)
+        let tabBarsQuery = XCUIApplication().tabBars
+        XCTAssertEqual(tabBarsQuery.buttons.count, 2)
+    }
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testThatThereAre28CarsInTheTableView() {
+        let app = XCUIApplication()
+        app.launch()
+        sleep(mockSleepDelay)
+        XCTAssertEqual(XCUIApplication().tables.cells.count, 28)
+    }
+
+    func testFirstCarFromTableView() {
+        let app = XCUIApplication()
+        app.launch()
+        sleep(mockSleepDelay)
+        
+        let tablesQuery = XCUIApplication().tables
+        let firstCell = tablesQuery.cells.element(boundBy: 0)
+        
+        let firstCellNameLabel = firstCell.staticTexts["Vanessa"]
+        XCTAssertNotNil(firstCellNameLabel.value)
+        
+        let firstCellLicensePlate = firstCell.staticTexts["M-VO0259"]
+        XCTAssertNotNil(firstCellLicensePlate.value)
+    }
+
+    func testSecondCarFromTableView() {
+        let app = XCUIApplication()
+        app.launch()
+        sleep(mockSleepDelay)
+        
+        let tablesQuery = XCUIApplication().tables
+        let firstCell = tablesQuery.cells.element(boundBy: 1)
+        
+        let firstCellNameLabel = firstCell.staticTexts["Regine"]
+        XCTAssertNotNil(firstCellNameLabel.value)
+        
+        let firstCellLicensePlate = firstCell.staticTexts["M-I7425"]
+        XCTAssertNotNil(firstCellLicensePlate.value)
     }
 
     func testLaunchPerformance() {
