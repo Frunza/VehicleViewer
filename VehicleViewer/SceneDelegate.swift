@@ -35,17 +35,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let secondTabNavigationControoller = buildSecondTabBarViewController()
         tabBarController.viewControllers = [firstTabNavigationController, secondTabNavigationControoller]
         
+        let successBlock: ([Car]) -> () = { cars in
+            self.vehiclesViewController?.update(cars: cars)
+            self.vehicleMapViewController?.update(cars: cars)
+            OverlayManager.hide()
+        }
+        self.loadCarsAsync(carsProvider, tabBarController: tabBarController, onSuccess: successBlock)
+        
+        let item1 = UITabBarItem(title: String.empty(), image: SFSymbols.car, tag: 0)
+        let item2 = UITabBarItem(title: String.empty(), image: SFSymbols.map, tag: 1)
+        firstTabNavigationController.tabBarItem = item1
+        secondTabNavigationControoller.tabBarItem = item2
+    }
+    
+    private func loadCarsAsync(_ carsProvider: CarsProvider<LocalDataProvider>, tabBarController: UITabBarController, onSuccess: @escaping ([Car]) -> ()) {
         OverlayManager.present(with: UIConstants.loadingCarsText)
         carsProvider.loadCars(onSuccess: { cars in
             self.vehiclesViewController?.update(cars: cars)
             self.vehicleMapViewController?.update(cars: cars)
             OverlayManager.hide()
-        }) { OverlayManager.hide() }
-        
-        let item1 = UITabBarItem(title: String.empty(), image: SFSymbols.car, tag: 0)
-        let item2 = UITabBarItem(title: String.empty(), image:  SFSymbols.map, tag: 1)
-        firstTabNavigationController.tabBarItem = item1
-        secondTabNavigationControoller.tabBarItem = item2
+        }) { OverlayManager.hide()
+            DispatchQueue.main.async {
+                tabBarController.popupAlert(title: "Failed to load data", message: "Please check your internet connection and try again", actionTitles: ["Retry"], actions: [
+                { action in
+                    self.loadCarsAsync(carsProvider, tabBarController: tabBarController, onSuccess: onSuccess)
+                }])
+            }
+        }
     }
     
     private func buildFirstTabBarViewController() -> UIViewController {
