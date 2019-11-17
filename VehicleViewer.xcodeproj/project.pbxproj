@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E0A7D4823808F40005DFE73 /* CarMarkerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0A7D4723808F40005DFE73 /* CarMarkerAnnotationView.swift */; };
-		1E0A7D5E2380B022005DFE73 /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0A7D5D2380B022005DFE73 /* ClusterAnnotationView.swift */; };
 		1E1DE7EC237C75CD002D445C /* TestCars.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E1DE7EB237C75CD002D445C /* TestCars.json */; };
 		1E7C20D2237C07C2009A1AB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C20D1237C07C2009A1AB2 /* AppDelegate.swift */; };
 		1E7C20D4237C07C2009A1AB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C20D3237C07C2009A1AB2 /* SceneDelegate.swift */; };
@@ -27,7 +25,7 @@
 		1EC1A4FF238183E600DC17FC /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1A4FE238183E600DC17FC /* CarViewModel.swift */; };
 		1EC1A50723818D8C00DC17FC /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1A50623818D8C00DC17FC /* Images.swift */; };
 		1EC1A50A23818ED200DC17FC /* VehicleViewerCore in Frameworks */ = {isa = PBXBuildFile; productRef = 1EC1A50923818ED200DC17FC /* VehicleViewerCore */; };
-		1ED44DE5237F02D300EE3F02 /* VehicleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED44DE4237F02D300EE3F02 /* VehicleMapViewController.swift */; };
+		1EC1A5132381994600DC17FC /* VehicleViewerMapView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EC1A5122381994600DC17FC /* VehicleViewerMapView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E0A7D4723808F40005DFE73 /* CarMarkerAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMarkerAnnotationView.swift; sourceTree = "<group>"; };
-		1E0A7D5D2380B022005DFE73 /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
 		1E1DE7EB237C75CD002D445C /* TestCars.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestCars.json; sourceTree = "<group>"; };
 		1E7C20CE237C07C2009A1AB2 /* VehicleViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VehicleViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C20D1237C07C2009A1AB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +67,6 @@
 		1E99BD55237CBC1500661215 /* OverlayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayManager.swift; sourceTree = "<group>"; };
 		1EC1A4FE238183E600DC17FC /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
 		1EC1A50623818D8C00DC17FC /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
-		1ED44DE4237F02D300EE3F02 /* VehicleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +77,7 @@
 				1E99BD54237CBBF300661215 /* JGProgressHUD in Frameworks */,
 				1EC1A50A23818ED200DC17FC /* VehicleViewerCore in Frameworks */,
 				1E99BD51237CBB7700661215 /* SDWebImage in Frameworks */,
+				1EC1A5132381994600DC17FC /* VehicleViewerMapView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +101,6 @@
 		1E1DE7E7237C7546002D445C /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				1E1DE7E9237C7584002D445C /* VehicleMap */,
 				1E1DE7E8237C7576002D445C /* VehicleList */,
 			);
 			path = UI;
@@ -121,16 +116,6 @@
 				1EC1A4FE238183E600DC17FC /* CarViewModel.swift */,
 			);
 			path = VehicleList;
-			sourceTree = "<group>";
-		};
-		1E1DE7E9237C7584002D445C /* VehicleMap */ = {
-			isa = PBXGroup;
-			children = (
-				1ED44DE4237F02D300EE3F02 /* VehicleMapViewController.swift */,
-				1E0A7D4723808F40005DFE73 /* CarMarkerAnnotationView.swift */,
-				1E0A7D5D2380B022005DFE73 /* ClusterAnnotationView.swift */,
-			);
-			path = VehicleMap;
 			sourceTree = "<group>";
 		};
 		1E1DE7EA237C75A5002D445C /* Resources */ = {
@@ -232,6 +217,7 @@
 				1E99BD50237CBB7700661215 /* SDWebImage */,
 				1E99BD53237CBBF300661215 /* JGProgressHUD */,
 				1EC1A50923818ED200DC17FC /* VehicleViewerCore */,
+				1EC1A5122381994600DC17FC /* VehicleViewerMapView */,
 			);
 			productName = VehicleViewer;
 			productReference = 1E7C20CE237C07C2009A1AB2 /* VehicleViewer.app */;
@@ -309,6 +295,7 @@
 				1E99BD4F237CBB7700661215 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				1E99BD52237CBBF300661215 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 				1EC1A50823818ED200DC17FC /* XCRemoteSwiftPackageReference "VehicleViewerCore" */,
+				1EC1A5112381994600DC17FC /* XCRemoteSwiftPackageReference "VehicleViewerMapView" */,
 			);
 			productRefGroup = 1E7C20CF237C07C2009A1AB2 /* Products */;
 			projectDirPath = "";
@@ -355,16 +342,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E0A7D4823808F40005DFE73 /* CarMarkerAnnotationView.swift in Sources */,
 				1E99BD56237CBC1500661215 /* OverlayManager.swift in Sources */,
 				1E7C20D2237C07C2009A1AB2 /* AppDelegate.swift in Sources */,
 				1EC1A50723818D8C00DC17FC /* Images.swift in Sources */,
 				1EC1A4FF238183E600DC17FC /* CarViewModel.swift in Sources */,
 				1E99BD49237CB6D100661215 /* VehiclesViewController.swift in Sources */,
 				1E7C20D4237C07C2009A1AB2 /* SceneDelegate.swift in Sources */,
-				1ED44DE5237F02D300EE3F02 /* VehicleMapViewController.swift in Sources */,
 				1E99BD41237CB0E500661215 /* AppConstants.swift in Sources */,
-				1E0A7D5E2380B022005DFE73 /* ClusterAnnotationView.swift in Sources */,
 				1E99BD4D237CB8FD00661215 /* CarCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -706,6 +690,14 @@
 				minimumVersion = 0.0.1;
 			};
 		};
+		1EC1A5112381994600DC17FC /* XCRemoteSwiftPackageReference "VehicleViewerMapView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Frunza/VehicleViewerMapView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -723,6 +715,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1EC1A50823818ED200DC17FC /* XCRemoteSwiftPackageReference "VehicleViewerCore" */;
 			productName = VehicleViewerCore;
+		};
+		1EC1A5122381994600DC17FC /* VehicleViewerMapView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EC1A5112381994600DC17FC /* XCRemoteSwiftPackageReference "VehicleViewerMapView" */;
+			productName = VehicleViewerMapView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

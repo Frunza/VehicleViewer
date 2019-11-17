@@ -1,5 +1,6 @@
 import UIKit
 import VehicleViewerCore
+import VehicleViewerMapView
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

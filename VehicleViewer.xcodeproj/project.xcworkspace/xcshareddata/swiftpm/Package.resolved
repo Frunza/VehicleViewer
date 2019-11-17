@@ -27,6 +27,15 @@
           "revision": "235ad8f736ea10b0cb5235ea86fff8412ec55d10",
           "version": "0.0.1"
         }
+      },
+      {
+        "package": "VehicleViewerMapView",
+        "repositoryURL": "https://github.com/Frunza/VehicleViewerMapView",
+        "state": {
+          "branch": null,
+          "revision": "6b307d128649443c578d1075e59e79ff55c76ba5",
+          "version": "0.0.1"
+        }
       }
     ]
   },
