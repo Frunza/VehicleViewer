@@ -13,16 +13,19 @@ class CarCell: UITableViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var licensePlateLabel: UILabel!
     
-    private let imageRatio: CGFloat = 0.57
+    private static let imageRatio: CGFloat = 0.57
+    private static let imageMargin: CGFloat = 10
     
     func updateModel(_ model: CarCellModel) {
         nameLabel.text = model.name
         licensePlateLabel.text = model.licensePlate
         vehicleImageView.sd_setImage(with: URL(string: model.imageUrl), placeholderImage: Images.defaultCar)
-        let imageWidth = vehicleImageView.frame.size.width
-        let imageHeight = Int(imageWidth * imageRatio)
-        let imageHeightCGFloat = CGFloat(imageHeight)
-        vehicleImageView.heightAnchor.constraint(equalToConstant: CGFloat(imageHeight)).isActive = true
+    }
+    
+    static func dynamicHeight(for width: CGFloat) -> CGFloat {
+        let imageWidth = width - 2 * imageMargin
+        let imageHeight = imageWidth * imageRatio
+        return imageHeight + imageMargin
     }
     
 }

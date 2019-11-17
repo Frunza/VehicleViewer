@@ -45,10 +45,14 @@ class VehiclesViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! CarCell
-               let car = cars[indexPath.row]
+        let car = cars[indexPath.row]
         let cellModel = CarCellModel(imageUrl: car.carImageUrl, name: car.name, licensePlate: car.licensePlate)
         cell.updateModel(cellModel)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CarCell.dynamicHeight(for: tableView.frame.width)
     }
     
 }
