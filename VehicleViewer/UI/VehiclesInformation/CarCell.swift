@@ -16,6 +16,11 @@ class CarCell: UITableViewCell {
     private static let imageRatio: CGFloat = 0.57
     private static let imageMargin: CGFloat = 10
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        contentView.backgroundColor = .darkerGrayColor
+    }
+    
     func updateModel(_ model: CarCellModel) {
         nameLabel.text = model.name
         licensePlateLabel.text = model.licensePlate

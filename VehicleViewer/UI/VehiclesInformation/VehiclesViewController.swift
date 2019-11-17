@@ -13,9 +13,7 @@ class VehiclesViewController: UITableViewController {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: String.empty(), style: .plain, target: nil, action: nil)
         self.tableView.register(UINib(nibName: carCellNibName, bundle: nil), forCellReuseIdentifier: reuseIdentifier)
         self.tableView.tableFooterView = UIView()
-        self.tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 16, right: 0)
-        self.tableView.backgroundColor = .black
-        self.tableView.allowsSelection = false
+        self.tableView.backgroundColor = .darkerGrayColor
     }
     
     func initialize(with cars: [Car]) {

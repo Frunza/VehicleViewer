@@ -52,7 +52,7 @@ extension VehicleMapViewController: MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let _ = annotation as? CarMarkerAnnotationView else { return nil }
-        return CarMarkerAnnotationView(annotation: annotation, reuseIdentifier: CarMarkerAnnotationView.reuseID)
+        return CarMarkerAnnotationView(annotation: annotation, reuseIdentifier: CarMarkerAnnotationView.reuseId)
     }
 
 }

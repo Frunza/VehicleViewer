@@ -2,11 +2,12 @@ import MapKit
 
 class CarMarkerAnnotationView: MKMarkerAnnotationView {
 
-    static let reuseID = "carMarkerAnnotation"
+    static let reuseId = "carMarkerAnnotation"
+    let clusteringId = "cars"
 
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-        clusteringIdentifier = "cars"
+        clusteringIdentifier = clusteringId
     }
 
     required init?(coder aDecoder: NSCoder) {
