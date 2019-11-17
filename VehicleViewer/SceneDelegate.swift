@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let localDataProvider = LocalDataProvider(carsFile: AppConstants.carsFileName, type: AppConstants.resourceType, mockDelay: AppConstants.mockDelay)
         let carsProvider = CarsProvider.build(localDataProvider)
         #else
-        let categoryProcarsProvidervider = CarsProvider.build(EShopNetworkManager())
+        let carsProvider = CarsProvider.build(OnlineCarsNetworkManager())
         #endif
         
         let firstTabNavigationController = buildFirstTabBarViewController()
