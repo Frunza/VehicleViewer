@@ -106,12 +106,12 @@
 			isa = PBXGroup;
 			children = (
 				1E1DE7E9237C7584002D445C /* VehicleMap */,
-				1E1DE7E8237C7576002D445C /* VehiclesInformation */,
+				1E1DE7E8237C7576002D445C /* VehicleList */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		1E1DE7E8237C7576002D445C /* VehiclesInformation */ = {
+		1E1DE7E8237C7576002D445C /* VehicleList */ = {
 			isa = PBXGroup;
 			children = (
 				1E99BD47237CB6D100661215 /* VehiclesViewController.swift */,
@@ -120,7 +120,7 @@
 				1E99BD4C237CB8FD00661215 /* CarCell.xib */,
 				1EC1A4FE238183E600DC17FC /* CarViewModel.swift */,
 			);
-			path = VehiclesInformation;
+			path = VehicleList;
 			sourceTree = "<group>";
 		};
 		1E1DE7E9237C7584002D445C /* VehicleMap */ = {
