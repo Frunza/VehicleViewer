@@ -47,8 +47,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func buildFirstTabBarViewController() -> UIViewController {
-        let vehiclesViewController = VehiclesViewController()
-        vehiclesViewController.initialize(with: [])
+        let vehiclesViewController = VehiclesViewController(with: [])
         let navigationControoller = UINavigationController.init(rootViewController: vehiclesViewController)
         self.vehiclesViewController = vehiclesViewController
         navigationControoller.navigationBar.barStyle = .black

@@ -8,17 +8,22 @@ class VehiclesViewController: UITableViewController {
     
     var cars = [Car]()
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    init(with cars: [Car]) {
+        super.init(nibName: nil, bundle: nil)
+        self.cars = cars
+        self.updateTitle()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: String.empty(), style: .plain, target: nil, action: nil)
         self.tableView.register(UINib(nibName: carCellNibName, bundle: nil), forCellReuseIdentifier: reuseIdentifier)
         self.tableView.tableFooterView = UIView()
         self.tableView.backgroundColor = .darkerGrayColor
-    }
-    
-    func initialize(with cars: [Car]) {
-        self.cars = cars
-        self.updateTitle()
     }
     
     func update(cars: [Car]) {
