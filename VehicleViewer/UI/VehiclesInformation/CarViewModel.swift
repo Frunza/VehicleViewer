@@ -1,4 +1,5 @@
 import Foundation
+import VehicleViewerCore
 
 struct CarViewModel {
     

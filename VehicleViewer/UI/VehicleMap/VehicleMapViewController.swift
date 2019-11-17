@@ -1,5 +1,6 @@
 import UIKit
 import MapKit
+import VehicleViewerCore
 
 class VehicleMapViewController: UIViewController {
 

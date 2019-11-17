@@ -1,5 +1,6 @@
 import UIKit
 import SDWebImage
+import VehicleViewerCore
 
 struct CarCellModel {
     let imageUrl: String

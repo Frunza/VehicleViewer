@@ -1,4 +1,5 @@
 import MapKit
+import VehicleViewerCore
 
 class CarMarkerAnnotationView: MKMarkerAnnotationView {
 

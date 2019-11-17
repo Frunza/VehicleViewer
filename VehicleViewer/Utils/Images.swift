@@ -1,7 +1,7 @@
 import UIKit
 
-public struct Images {
+struct Images {
     
-    public static let defaultCar = UIImage(named: "DefaultCar")!
+    static let defaultCar = UIImage(named: "DefaultCar")!
     
 }
