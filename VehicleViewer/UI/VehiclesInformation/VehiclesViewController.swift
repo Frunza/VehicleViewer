@@ -38,13 +38,15 @@ class VehiclesViewController: UITableViewController {
         let titlePrefix = cars.count == 0 ? String.empty() : " (\(cars.count))"
         self.navigationItem.title = self.baseTitle + titlePrefix
     }
+    
+}
 
-    // MARK: - Table view data source
+// Table view data source
+extension VehiclesViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cars.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! CarCell
