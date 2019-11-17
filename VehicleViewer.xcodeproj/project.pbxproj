@@ -37,6 +37,8 @@
 		1E99BD51237CBB7700661215 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1E99BD50237CBB7700661215 /* SDWebImage */; };
 		1E99BD54237CBBF300661215 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 1E99BD53237CBBF300661215 /* JGProgressHUD */; };
 		1E99BD56237CBC1500661215 /* OverlayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E99BD55237CBC1500661215 /* OverlayManager.swift */; };
+		1EC1A4FF238183E600DC17FC /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1A4FE238183E600DC17FC /* CarViewModel.swift */; };
+		1EC1A501238184F400DC17FC /* CarDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1A500238184F400DC17FC /* CarDataUtils.swift */; };
 		1ED44DE5237F02D300EE3F02 /* VehicleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED44DE4237F02D300EE3F02 /* VehicleMapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,8 @@
 		1E99BD4B237CB8FD00661215 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 		1E99BD4C237CB8FD00661215 /* CarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarCell.xib; sourceTree = "<group>"; };
 		1E99BD55237CBC1500661215 /* OverlayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayManager.swift; sourceTree = "<group>"; };
+		1EC1A4FE238183E600DC17FC /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
+		1EC1A500238184F400DC17FC /* CarDataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDataUtils.swift; sourceTree = "<group>"; };
 		1ED44DE4237F02D300EE3F02 /* VehicleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +142,7 @@
 				1E99BD48237CB6D100661215 /* VehiclesViewController.xib */,
 				1E99BD4B237CB8FD00661215 /* CarCell.swift */,
 				1E99BD4C237CB8FD00661215 /* CarCell.xib */,
+				1EC1A4FE238183E600DC17FC /* CarViewModel.swift */,
 			);
 			path = VehiclesInformation;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 				1E99BD40237CB0E500661215 /* AppConstants.swift */,
 				1E99BD55237CBC1500661215 /* OverlayManager.swift */,
 				1E0A7D4323807F6F005DFE73 /* Images.swift */,
+				1EC1A500238184F400DC17FC /* CarDataUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -414,11 +420,13 @@
 				1E99BD56237CBC1500661215 /* OverlayManager.swift in Sources */,
 				1E99BD3D237CAE4600661215 /* CarsDataProviderProtocol.swift in Sources */,
 				1E99BD3B237CAD7700661215 /* CarsProvider.swift in Sources */,
+				1EC1A501238184F400DC17FC /* CarDataUtils.swift in Sources */,
 				1E99BD36237CAA5900661215 /* Car.swift in Sources */,
 				1E0A7D4423807F6F005DFE73 /* Images.swift in Sources */,
 				1E99BD39237CAB1D00661215 /* RestCar.swift in Sources */,
 				1E7C20D2237C07C2009A1AB2 /* AppDelegate.swift in Sources */,
 				1E99BD44237CB2FD00661215 /* OnlineCarsUrlUtils.swift in Sources */,
+				1EC1A4FF238183E600DC17FC /* CarViewModel.swift in Sources */,
 				1E8B14BF237C500D00A882A2 /* UIConstants.swift in Sources */,
 				1E99BD49237CB6D100661215 /* VehiclesViewController.swift in Sources */,
 				1E7C20D4237C07C2009A1AB2 /* SceneDelegate.swift in Sources */,

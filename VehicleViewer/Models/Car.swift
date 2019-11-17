@@ -14,9 +14,9 @@ struct Car {
     public let latitude: Double
     public let longitude: Double
     public let innerCleanliness: String
-    public let carImageUrl: String
+    public let imageUrl: String
     
-    init(id: String, name: String, make: String, color: String, series: String, fuelType: String, fuelLevel: Double, transmission: String, licensePlate: String, latitude: Double, longitude: Double, innerCleanliness: String, carImageUrl: String) {
+    init(id: String, name: String, make: String, color: String, series: String, fuelType: String, fuelLevel: Double, transmission: String, licensePlate: String, latitude: Double, longitude: Double, innerCleanliness: String, imageUrl: String) {
         self.id = id
         self.name = name
         self.make = make
@@ -29,7 +29,7 @@ struct Car {
         self.latitude = latitude
         self.longitude = longitude
         self.innerCleanliness = innerCleanliness
-        self.carImageUrl = carImageUrl
+        self.imageUrl = imageUrl
     }
     
 }

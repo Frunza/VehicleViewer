@@ -6,7 +6,7 @@ class VehiclesViewController: UITableViewController {
     private let carCellNibName = "CarCell"
     private let baseTitle = "Cars"
     
-    var cars = [Car]()
+    var carsViewModels = [CarViewModel]()
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -14,7 +14,7 @@ class VehiclesViewController: UITableViewController {
     
     init(with cars: [Car]) {
         super.init(nibName: nil, bundle: nil)
-        self.cars = cars
+        self.carsViewModels = cars.map { CarViewModel(car: $0) }
         self.updateTitle()
     }
     
@@ -28,14 +28,14 @@ class VehiclesViewController: UITableViewController {
     
     func update(cars: [Car]) {
         DispatchQueue.main.async {
-            self.cars = cars
+            self.carsViewModels = cars.map { CarViewModel(car: $0) }
             self.updateTitle()
             self.tableView.reloadData()
         }
     }
     
     private func updateTitle() {
-        let titlePrefix = cars.count == 0 ? String.empty() : " (\(cars.count))"
+        let titlePrefix = carsViewModels.count == 0 ? String.empty() : " (\(carsViewModels.count))"
         self.navigationItem.title = self.baseTitle + titlePrefix
     }
     
@@ -45,14 +45,13 @@ class VehiclesViewController: UITableViewController {
 extension VehiclesViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cars.count
+        return carsViewModels.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! CarCell
-        let car = cars[indexPath.row]
-        let cellModel = CarCellModel(imageUrl: car.carImageUrl, name: car.name, licensePlate: car.licensePlate)
-        cell.updateModel(cellModel)
+        let carViewModel = carsViewModels[indexPath.row]
+        cell.carViewModel = carViewModel
         return cell
     }
     

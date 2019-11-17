@@ -16,15 +16,17 @@ class CarCell: UITableViewCell {
     private static let imageRatio: CGFloat = 0.57
     private static let imageMargin: CGFloat = 10
     
+    var carViewModel: CarViewModel! {
+        didSet {
+            nameLabel.text = carViewModel.name
+            licensePlateLabel.text = carViewModel.licensePlate
+            vehicleImageView.sd_setImage(with: URL(string: carViewModel.imageUrl), placeholderImage: Images.defaultCar)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         contentView.backgroundColor = .darkerGrayColor
-    }
-    
-    func updateModel(_ model: CarCellModel) {
-        nameLabel.text = model.name
-        licensePlateLabel.text = model.licensePlate
-        vehicleImageView.sd_setImage(with: URL(string: model.imageUrl), placeholderImage: Images.defaultCar)
     }
     
     static func dynamicHeight(for width: CGFloat) -> CGFloat {

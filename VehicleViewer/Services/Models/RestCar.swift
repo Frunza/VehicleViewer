@@ -20,8 +20,7 @@ struct RestCar: Codable {
     public let carImageUrl: String
     
     public func asCar() -> Car {
-        let fixedColor = color.replacingOccurrences(of: "_", with: " ")
-        return Car(id: id, name: name, make: make, color: fixedColor, series: series, fuelType: fuelType, fuelLevel: fuelLevel, transmission: transmission, licensePlate: licensePlate, latitude: latitude, longitude: longitude, innerCleanliness: innerCleanliness, carImageUrl: carImageUrl)
+        return Car(id: id, name: name, make: make, color: color, series: series, fuelType: fuelType, fuelLevel: fuelLevel, transmission: transmission, licensePlate: licensePlate, latitude: latitude, longitude: longitude, innerCleanliness: innerCleanliness, imageUrl: carImageUrl)
     }
     
 }
