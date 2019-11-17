@@ -15,6 +15,7 @@ class VehiclesViewController: UITableViewController {
         self.tableView.tableFooterView = UIView()
         self.tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 16, right: 0)
         self.tableView.backgroundColor = .black
+        self.tableView.allowsSelection = false
     }
     
     func initialize(with cars: [Car]) {
@@ -48,18 +49,6 @@ class VehiclesViewController: UITableViewController {
         let cellModel = CarCellModel(imageUrl: car.carImageUrl, name: car.name, licensePlate: car.licensePlate)
         cell.updateModel(cellModel)
         return cell
-    }
-    
-    // MARK: - Table view delegate
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presentCarDetailsViewController(indexPath.row)
-    }
-    
-    private func presentCarDetailsViewController(_ index: Int) {
-        let carDetailsViewController = VehicleDetailsViewController()
-        carDetailsViewController.initialize(with: cars[index])
-        navigationController?.pushViewController(carDetailsViewController, animated: true)
     }
     
 }

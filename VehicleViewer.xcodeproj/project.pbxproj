@@ -10,8 +10,6 @@
 		1E0A7D4423807F6F005DFE73 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0A7D4323807F6F005DFE73 /* Images.swift */; };
 		1E0A7D4823808F40005DFE73 /* CarMarkerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0A7D4723808F40005DFE73 /* CarMarkerAnnotationView.swift */; };
 		1E0A7D5E2380B022005DFE73 /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0A7D5D2380B022005DFE73 /* ClusterAnnotationView.swift */; };
-		1E1BAA26237DFCE000A2FACE /* VehicleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1BAA24237DFCE000A2FACE /* VehicleDetailsViewController.swift */; };
-		1E1BAA27237DFCE000A2FACE /* VehicleDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1BAA25237DFCE000A2FACE /* VehicleDetailsViewController.xib */; };
 		1E1DE7EC237C75CD002D445C /* TestCars.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E1DE7EB237C75CD002D445C /* TestCars.json */; };
 		1E7C20D2237C07C2009A1AB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C20D1237C07C2009A1AB2 /* AppDelegate.swift */; };
 		1E7C20D4237C07C2009A1AB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C20D3237C07C2009A1AB2 /* SceneDelegate.swift */; };
@@ -63,8 +61,6 @@
 		1E0A7D4323807F6F005DFE73 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		1E0A7D4723808F40005DFE73 /* CarMarkerAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMarkerAnnotationView.swift; sourceTree = "<group>"; };
 		1E0A7D5D2380B022005DFE73 /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
-		1E1BAA24237DFCE000A2FACE /* VehicleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailsViewController.swift; sourceTree = "<group>"; };
-		1E1BAA25237DFCE000A2FACE /* VehicleDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleDetailsViewController.xib; sourceTree = "<group>"; };
 		1E1DE7EB237C75CD002D445C /* TestCars.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestCars.json; sourceTree = "<group>"; };
 		1E7C20CE237C07C2009A1AB2 /* VehicleViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VehicleViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C20D1237C07C2009A1AB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,8 +138,6 @@
 				1E99BD48237CB6D100661215 /* VehiclesViewController.xib */,
 				1E99BD4B237CB8FD00661215 /* CarCell.swift */,
 				1E99BD4C237CB8FD00661215 /* CarCell.xib */,
-				1E1BAA24237DFCE000A2FACE /* VehicleDetailsViewController.swift */,
-				1E1BAA25237DFCE000A2FACE /* VehicleDetailsViewController.xib */,
 			);
 			path = VehiclesInformation;
 			sourceTree = "<group>";
@@ -389,7 +383,6 @@
 				1E99BD4A237CB6D100661215 /* VehiclesViewController.xib in Resources */,
 				1E1DE7EC237C75CD002D445C /* TestCars.json in Resources */,
 				1E7C20DD237C07C8009A1AB2 /* Assets.xcassets in Resources */,
-				1E1BAA27237DFCE000A2FACE /* VehicleDetailsViewController.xib in Resources */,
 				1E99BD4E237CB8FD00661215 /* CarCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,7 +415,6 @@
 				1E99BD3D237CAE4600661215 /* CarsDataProviderProtocol.swift in Sources */,
 				1E99BD3B237CAD7700661215 /* CarsProvider.swift in Sources */,
 				1E99BD36237CAA5900661215 /* Car.swift in Sources */,
-				1E1BAA26237DFCE000A2FACE /* VehicleDetailsViewController.swift in Sources */,
 				1E0A7D4423807F6F005DFE73 /* Images.swift in Sources */,
 				1E99BD39237CAB1D00661215 /* RestCar.swift in Sources */,
 				1E7C20D2237C07C2009A1AB2 /* AppDelegate.swift in Sources */,

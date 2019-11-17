@@ -20,8 +20,9 @@ class CarCell: UITableViewCell {
         licensePlateLabel.text = model.licensePlate
         vehicleImageView.sd_setImage(with: URL(string: model.imageUrl), placeholderImage: Images.defaultCar)
         let imageWidth = vehicleImageView.frame.size.width
-        let imageHeight = imageWidth * imageRatio
-        vehicleImageView.heightAnchor.constraint(equalToConstant: imageHeight).isActive = true
+        let imageHeight = Int(imageWidth * imageRatio)
+        let imageHeightCGFloat = CGFloat(imageHeight)
+        vehicleImageView.heightAnchor.constraint(equalToConstant: CGFloat(imageHeight)).isActive = true
     }
     
 }
