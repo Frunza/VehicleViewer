@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/Frunza/VehicleViewerCore",
         "state": {
           "branch": null,
-          "revision": "235ad8f736ea10b0cb5235ea86fff8412ec55d10",
-          "version": "0.0.1"
+          "revision": "96636fbae36a685ed4496e7c3547bf50d7bed778",
+          "version": "0.0.3"
         }
       },
       {
@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/Frunza/VehicleViewerMapView",
         "state": {
           "branch": null,
-          "revision": "6b307d128649443c578d1075e59e79ff55c76ba5",
-          "version": "0.0.1"
+          "revision": "a9d8d9e6e8895ca53426740fd6c25eec5df0bfa8",
+          "version": "0.0.2"
         }
       }
     ]

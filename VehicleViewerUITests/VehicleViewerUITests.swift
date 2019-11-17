@@ -1,11 +1,3 @@
-//
-//  VehicleViewerUITests.swift
-//  VehicleViewerUITests
-//
-//  Created by Frunza Hincu, Samuel (415) on 13.11.19.
-//  Copyright © 2019 Frunza Hincu, Samuel. All rights reserved.
-//
-
 import XCTest
 
 class VehicleViewerUITests: XCTestCase {
